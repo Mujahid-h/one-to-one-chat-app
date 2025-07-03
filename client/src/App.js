@@ -33,14 +33,11 @@ function App() {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io(
-        "https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/",
-        {
-          query: {
-            userId: authUser?._id,
-          },
-        }
-      );
+      const socket = io("https://one-to-one-chat-app-blond.vercel.app/", {
+        query: {
+          userId: authUser?._id,
+        },
+      });
       dispatch(setSocket(socket));
 
       // backend sa online users receive karrahay hain

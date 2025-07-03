@@ -11,7 +11,7 @@ const useGetOtherUsers = () => {
       try {
         axios.defaults.withCredentials = true;
         const res = await axios.get(
-          `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/api/v1/user`
+          `https://one-to-one-chat-app-blond.vercel.app/api/v1/user`
         );
         dispatch(setOtherUsers(res?.data));
       } catch (error) {

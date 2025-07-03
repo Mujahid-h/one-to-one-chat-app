@@ -15,7 +15,7 @@ const Sidebar = () => {
     try {
       axios.defaults.withCredentials = true;
       const res = await axios.get(
-        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/api/v1/user/logout`
+        `https://one-to-one-chat-app-blond.vercel.app/api/v1/user/logout`
       );
       toast.success(res?.data?.message);
       navigate("/login");
