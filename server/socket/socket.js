@@ -7,7 +7,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
   cors: {
-    origin: ["https://one-to-one-chat-app-ujgw.vercel.app/"],
+    origin: ["https://one-to-one-chat-app-ujgw.vercel.app"],
     methods: ["GET", "POST"],
   },
 });
