@@ -33,7 +33,7 @@ function App() {
 
   useEffect(() => {
     if (authUser) {
-      const socket = io("https://one-to-one-chat-app-blond.vercel.app/", {
+      const socket = io("https://one-to-one-chat-app-blond.vercel.app", {
         query: {
           userId: authUser?._id,
         },
