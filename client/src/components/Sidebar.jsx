@@ -14,7 +14,9 @@ const Sidebar = () => {
   const logoutHandler = async () => {
     try {
       axios.defaults.withCredentials = true;
-      const res = await axios.get(`http://localhost:8000/api/v1/user/logout`);
+      const res = await axios.get(
+        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app//api/v1/user/logout`
+      );
       toast.success(res?.data?.message);
       navigate("/login");
       dispatch(setAuthUser(null));

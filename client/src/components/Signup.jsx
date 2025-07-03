@@ -21,7 +21,7 @@ const Signup = () => {
     try {
       e.preventDefault();
       const res = await axios.post(
-        `http://localhost:8000/api/v1/user/register`,
+        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app//api/v1/user/register`,
         user,
         {
           headers: {
