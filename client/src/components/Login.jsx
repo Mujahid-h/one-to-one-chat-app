@@ -17,7 +17,7 @@ const Login = () => {
     try {
       e.preventDefault();
       const res = await axios.post(
-        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app//api/v1/user/login`,
+        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/api/v1/user/login`,
         user,
         {
           headers: {

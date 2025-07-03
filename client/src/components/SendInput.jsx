@@ -14,7 +14,7 @@ const SendInput = () => {
     e.preventDefault();
     try {
       const res = await axios.post(
-        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app//api/v1/message/send/${selectedUser?._id}`,
+        `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/api/v1/message/send/${selectedUser?._id}`,
         { message },
         {
           headers: {

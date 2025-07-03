@@ -12,7 +12,7 @@ const useGetMessages = () => {
       try {
         axios.defaults.withCredentials = true;
         const res = await axios.get(
-          `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app//api/v1/message/${selectedUser?._id}`
+          `https://one-to-one-chat-h7ygns7tm-mujahid-hussains-projects.vercel.app/api/v1/message/${selectedUser?._id}`
         );
         dispatch(setMessages(res?.data));
       } catch (error) {
