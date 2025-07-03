@@ -48,7 +48,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 const corsOption = {
-  origin: "https://one-to-one-chat-app-ujgw.vercel.app/",
+  origin: "https://one-to-one-chat-app-ujgw.vercel.app",
   credentials: true,
 };
 app.use(cors(corsOption));
