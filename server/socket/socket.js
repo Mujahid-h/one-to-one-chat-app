@@ -10,6 +10,7 @@ const io = new Server(server, {
     origin: ["https://one-to-one-chat-app-ujgw.vercel.app"],
     // origin: ["http://localhost:3000"],
     methods: ["GET", "POST"],
+    credentials: true,
   },
 });
 

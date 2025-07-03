@@ -37,6 +37,8 @@ function App() {
         query: {
           userId: authUser?._id,
         },
+        withCredentials: true, // 👈 ADD THIS LINE
+        transports: ["websocket"], // 👈 optional, ensures websocket is used directly
       });
       dispatch(setSocket(socket));
 
@@ -55,6 +57,37 @@ function App() {
       }
     }
   }, [authUser]);
+
+  //   useEffect(() => {
+  //   const initSocket = () => {
+  //     const socket = io("https://one-to-one-chat-app-blond.vercel.app", {
+  //       query: {
+  //         userId: authUser?._id,
+  //       },
+  //       withCredentials: true,
+  //     });
+  //     dispatch(setSocket(socket));
+
+  //     socket.on("getOnlineUsers", (onlineUsers) => {
+  //       dispatch(setOnlineUsers(onlineUsers));
+  //     });
+
+  //     return () => {
+  //       socket.close();
+  //     };
+  //   };
+
+  //   if (authUser) {
+  //     // fetch users first, then open socket
+  //     initSocket();
+  //   } else {
+  //     if (socket) {
+  //       socket.close();
+  //       dispatch(setSocket(null));
+  //     }
+  //   }
+  // }, [authUser]);
+
   return (
     <div className="p-4 h-screen flex justify-center items-center">
       <RouterProvider router={appRouter} />
