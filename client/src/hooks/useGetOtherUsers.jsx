@@ -9,9 +9,12 @@ const useGetOtherUsers = () => {
   useEffect(() => {
     const fetchOtherUsers = async () => {
       try {
-        axios.defaults.withCredentials = true;
+        // axios.defaults.withCredentials = true;
         const res = await axios.get(
-          `https://one-to-one-chat-app-blond.vercel.app/api/v1/user`
+          `https://one-to-one-chat-app-blond.vercel.app/api/v1/user`,
+          {
+            withCredentials: true,
+          }
         );
         dispatch(setOtherUsers(res?.data));
       } catch (error) {
